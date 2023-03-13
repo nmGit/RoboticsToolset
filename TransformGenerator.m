@@ -10,9 +10,9 @@ classdef TransformGenerator
             R_new = R*TransformGenerator.p_Rotate2(axis, degrees);
             H = TransformGenerator.Homogeneous(R_new, D);
         end
-        function R = p_Rotate2(axis, degrees)
+        function R = p_Rotate2(axis, rad)
 
-            rad = degrees * pi / 180;
+            %rad = degrees * pi / 180;
             if(axis == TransformGenerator.X)
                 R = [1 0            0       
                      0 cos(rad) -sin(rad)   
