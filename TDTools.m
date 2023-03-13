@@ -23,10 +23,10 @@ classdef TDTools
             line([d(1) d(1)+y(1)], [d(2) d(2)+y(2)], [d(3) d(3)+y(3)], 'color', 'g', 'LineWidth', 5);
             line([d(1) d(1)+z(1)], [d(2) d(2)+z(2)], [d(3) d(3)+z(3)], 'color', 'b', 'LineWidth', 5);
             if(strlength(s) > 0)
-                t = sprintf("(%d, %d, %d): %s", d(1), d(2), d(3), s);
+                t = sprintf("(%0.3f, %0.3f, %0.3f): %s", d(1), d(2), d(3), s);
 
             else
-                t = sprintf("(%d, %d, %d)", d(1), d(2), d(3));
+                t = sprintf("(%0.3f, %0.3f, %0.3f)", d(1), d(2), d(3));
 
             end
             text(d(1), d(2), d(3)-0.2, t);
